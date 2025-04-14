@@ -38,11 +38,26 @@
         }
 
         /* Navigation Bar */
-        .navbar {
+       /* .navbar {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 20px;
+            background-color: rgba(26, 26, 26, 0.95);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: padding 0.3s;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }*/
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px; /* Increased horizontal padding (top/bottom, left/right) */
             background-color: rgba(26, 26, 26, 0.95);
             position: fixed;
             top: 0;
@@ -96,6 +111,13 @@
 
         .navbar .nav-links a:hover::after {
             width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 15px 20px; /* Less padding on mobile */
+            }
+            /* The rest of your mobile styles... */
         }
 
         /* Hamburger Menu */
